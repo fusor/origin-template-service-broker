@@ -4,15 +4,15 @@ import (
 	"net"
 	"net/http"
 
+	//"github.com/fusor/origin-template-service-broker/pkg/broker/template"
+	"github.com/fusor/origin-template-service-broker/pkg/broker/ansibleapp"
+	"github.com/fusor/origin-template-service-broker/pkg/handler"
 	"github.com/golang/glog"
-	"github.com/jim-minter/origin-template-service-broker/pkg/broker/template"
-	"github.com/jim-minter/origin-template-service-broker/pkg/handler"
-	"github.com/openshift/origin/pkg/cmd/flagtypes"
-	"github.com/openshift/origin/pkg/cmd/util/clientcmd"
+	//"github.com/openshift/origin/pkg/cmd/flagtypes"
+	//"github.com/openshift/origin/pkg/cmd/util/clientcmd"
 	"github.com/spf13/pflag"
 	"k8s.io/kubernetes/pkg/util/logs"
-
-	_ "github.com/openshift/origin/pkg/api/install"
+	//_ "github.com/openshift/origin/pkg/api/install"
 )
 
 /*
@@ -27,12 +27,8 @@ var createProjects = pflag.Bool("create-projects", false, "set true to create a 
 
 func main() {
 	logs.InitLogs()
-	flagtypes.GLog(pflag.CommandLine)
 
-	factory := clientcmd.New(pflag.CommandLine)
-	pflag.Parse()
-
-	broker, err := template.NewBroker(factory, *createProjects)
+	broker, err := ansibleapp.NewBroker("My Test Broker")
 	if err != nil {
 		panic(err)
 	}
