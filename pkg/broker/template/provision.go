@@ -1,8 +1,8 @@
 package template
 
 import (
-	"github.com/jim-minter/origin-template-service-broker/pkg/broker"
-	"github.com/jim-minter/origin-template-service-broker/pkg/errors"
+	"github.com/fusor/origin-template-service-broker/pkg/broker"
+	"github.com/fusor/origin-template-service-broker/pkg/errors"
 	"github.com/openshift/origin/pkg/cmd/util/clientcmd"
 	"github.com/openshift/origin/pkg/config/cmd"
 	projectapi "github.com/openshift/origin/pkg/project/api"

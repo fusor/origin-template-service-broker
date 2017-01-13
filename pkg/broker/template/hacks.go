@@ -1,7 +1,7 @@
 package template
 
 import (
-	"github.com/jim-minter/origin-template-service-broker/pkg/broker"
+	"github.com/fusor/origin-template-service-broker/pkg/broker"
 	"github.com/pborman/uuid"
 )
 

@@ -3,8 +3,8 @@ package handler
 import (
 	"net/http"
 
+	"github.com/fusor/origin-template-service-broker/pkg/broker"
 	"github.com/gorilla/mux"
-	"github.com/jim-minter/origin-template-service-broker/pkg/broker"
 	"github.com/pborman/uuid"
 	"k8s.io/kubernetes/pkg/api/errors"
 )

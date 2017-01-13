@@ -3,7 +3,7 @@ package template
 import (
 	"strings"
 
-	"github.com/jim-minter/origin-template-service-broker/pkg/broker"
+	"github.com/fusor/origin-template-service-broker/pkg/broker"
 	"github.com/pborman/uuid"
 	kapi "k8s.io/kubernetes/pkg/api"
 	"k8s.io/kubernetes/pkg/kubelet/envvars"

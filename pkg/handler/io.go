@@ -6,7 +6,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/jim-minter/origin-template-service-broker/pkg/broker"
+	"github.com/fusor/origin-template-service-broker/pkg/broker"
 	kerrors "k8s.io/kubernetes/pkg/api/errors"
 )
 
