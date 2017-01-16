@@ -5,4 +5,4 @@
 curl \
   -H 'X-Broker-API-Version: 2.9' \
   -v \
-  http://localhost:8000/v2/catalog
+  http://cap.example.com:8000/v2/catalog

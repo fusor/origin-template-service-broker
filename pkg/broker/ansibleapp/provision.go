@@ -6,6 +6,7 @@ import (
 )
 
 func (b Broker) Provision(instanceUUID uuid.UUID, req *broker.ProvisionRequest) (*broker.ProvisionResponse, error) {
+	ProvisionHelloAnsibleApp()
 	return nil, notImplemented
 }
 
@@ -14,5 +15,6 @@ func (b Broker) Update(instanceUUID uuid.UUID, req *broker.UpdateRequest) (*brok
 }
 
 func (b Broker) Deprovision(instanceUUID uuid.UUID) (*broker.DeprovisionResponse, error) {
+	DeprovisionHelloAnsibleApp()
 	return nil, notImplemented // TODO
 }

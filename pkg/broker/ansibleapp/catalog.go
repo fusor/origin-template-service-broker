@@ -6,7 +6,6 @@ import (
 	"github.com/pborman/uuid"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
-	"os"
 	"path"
 )
 
@@ -21,10 +20,8 @@ type AnsibleApp struct {
 }
 
 func loadManifest() *AnsibleAppManifest {
-	gopath := os.Getenv("GOPATH")
 	// TODO: Could bundle this in with gobundle, hardcoding for now
-	manifestFilePath := path.Join(gopath, "src", "github.com", "fusor",
-		"origin-template-service-broker", "etc", "ansibleapp-manifest.yaml")
+	manifestFilePath := path.Join(ProjectRoot(), "etc", "ansibleapp-manifest.yaml")
 	fmt.Printf("Reading manifest file %s\n", manifestFilePath)
 
 	manifestFile, err := ioutil.ReadFile(manifestFilePath)
